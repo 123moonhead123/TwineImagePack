@@ -26,14 +26,13 @@ The macro provided is called RandomImageFromPack, and takes 5 arguments, needed 
 
 For example - 
 
-    <div><<RandomImageFromPack "School Outside" 450 450 alignRight>></div>
+    <<RandomImageFromPack "School Outside" 450 450 alignRight>>
 
 Will pick an image from random from the image pack called "School Outside", and render it at a maximum size of 450px X 450px (retaining scale), to the right of the text, inline.
 
-> It is recommended that you enclose this macro in it's own \<DIV> element, this is required as the ImagePack itself is loaded via AJAX, not compiled into the main Twine HTML, if you do not enclose the macro in it's own \<DIV> the position of the rendered element may not be as intended.
 
 ## Image Pack Script
-The second part of this system is the script to generate the Image Pack JSON index. This script is located under Images\ImagePack, and is called RebuildImagePack.cmd.
+The second part of this system is the script to generate the Image Pack JSON index. This script is located under Images\ImagePack, and is called RebuildImagePack.cmd. It will output a file called imagePacks.js and place it in the src\javascript folder, where the function script, imagePack.js can be foud.
 
 **Powershell 5.0 is a minimum requirement for this script to run.**
 
